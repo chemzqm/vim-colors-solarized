@@ -135,7 +135,12 @@
 " environment.
 
 " Environment has truecolor support
-function s:IsTruecolor()
+if exists('did_solarized_loaded') || v:version < 700
+  finish
+endif
+let did_solarized_loaded = 1
+
+function! s:IsTruecolor()
     return has('nvim')
 endfunction
 
