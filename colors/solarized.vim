@@ -136,7 +136,7 @@
 
 " Environment has truecolor support
 function s:IsTruecolor()
-    return has('gui_running') || (has('nvim') && $NVIM_TUI_ENABLE_TRUE_COLOR)
+    return has('nvim')
 endfunction
 
 " Terminals that support italics
