@@ -141,7 +141,7 @@ endif
 let did_solarized_loaded = 1
 
 function! s:IsTruecolor()
-    return has('nvim')
+    return has('nvim') || has('gui_running')
 endfunction
 
 " Terminals that support italics
