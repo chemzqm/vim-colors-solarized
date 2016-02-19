@@ -253,7 +253,11 @@ let colors_name = "solarized"
 if (s:IsTruecolor() && g:solarized_degrade == 0)
     let s:vmode       = "gui"
     let s:base03      = "#002b36"
-    let s:base02      = "#073642"
+    if has('nvim')
+      let s:base02      = "NONE"
+    else
+      let s:base02      = "#073642"
+    endif
     let s:base01      = "#586e75"
     let s:base00      = "#657b83"
     let s:base0       = "#839496"
@@ -1102,22 +1106,22 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 "}}}
 " Neovim Terminal {{{
 if has('nvim')
-    let g:terminal_color_0 = s:base02
-    let g:terminal_color_1 = s:red
-    let g:terminal_color_2 = s:green
-    let g:terminal_color_3 = s:yellow
-    let g:terminal_color_4 = s:blue
-    let g:terminal_color_5 = s:magenta
-    let g:terminal_color_6 = s:cyan
-    let g:terminal_color_7 = s:base2
-    let g:terminal_color_8 = s:base03
-    let g:terminal_color_9 = s:orange
-    let g:terminal_color_10 = s:base01
-    let g:terminal_color_11 = s:base00
-    let g:terminal_color_12 = s:base0
-    let g:terminal_color_13 = s:violet
-    let g:terminal_color_14 = s:base1
-    let g:terminal_color_15 = s:base3
+    let g:terminal_color_0 = '#4d4c3f'
+    let g:terminal_color_1 = '#aa3a11'
+    let g:terminal_color_2 = '#56a754'
+    let g:terminal_color_3 = '#928313'
+    let g:terminal_color_4 = '#5a9190'
+    let g:terminal_color_5 = '#92613d'
+    let g:terminal_color_6 = '#45906b'
+    let g:terminal_color_7 = '#938c87'
+    let g:terminal_color_8 = '#686757'
+    let g:terminal_color_9 = '#e86737'
+    let g:terminal_color_10 = '#6fe382'
+    let g:terminal_color_11 = '#dfa833'
+    let g:terminal_color_12 = '#88dfe0'
+    let g:terminal_color_13 = '#d89066'
+    let g:terminal_color_14 = '#66daa9'
+    let g:terminal_color_15 = '#fff4ed'
 endif
 " }}}
 " License "{{{
